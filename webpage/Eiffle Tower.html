@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Francaphone</title>
+<script src="Index.js"></script>
+<link rel="stylesheet" href="Index.css">
+<style>
+  .button_12 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_12 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_12 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_12:hover span {
+  padding-right: 25px;
+}
+
+.button_12:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button_anim {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button_anim:hover {background-color: #3e8e41}
+
+.button_anim:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2{
+
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #008CBA;
+  color: white;
+}
+.button2 {width: 100%;}
+</style>
+</head>
+<body>
+
+  <div id="navbar">
+    <a class="active" href="Index.htm">Home</a>
+    <a class="nav_index_a_change" href="Eiffle Tower.html" data-replace="Eiffel Tower"><span>Eiffel Tower</span></a>
+    <a class="nav_index_a_change" href="Notre Dame.html" data-replace="Notre Dame"><span>Notre Dame</span></a>
+  </div>
+  
+  <div class="header">
+    <h2>Francaphone</h2>
+    <p>By Form-3Q</p>
+  </div>
+  <br><br>
+  <div class="hero-image">
+    <!-- <img class="Index_Img_1" src="D:/School/Site/Assets/Eiffel TOwer.jpg" alt="Eiffle Tower"> -->
+    <div class="hero-text">
+      <h1 style="font-size:50px; color: black;">Eiffel Tower</h1>
+      <button class="button button2" style="width: 100% !important;" onclick="typeWriter()">Find more info here</button>
+    </div>
+  </div>
+
+
+
+  <br><br><br>
+  <button onclick="typeWriter_1()" class="button_12" style="vertical-align:middle"><span>Click Me!! </span></button>
+
+  <p id="demo_1">  <p id="demo_1_text";>
+    Mr. Eiffel housed a meteorology lab on the Tower's third floor where he performed studies in mainly physics(and other studies aswell) 
+   
+   A secret military bunker was built underneath the Tower.Today the bunker is home of a small museum.
+   
+   When Gustave Eiffel designed his namesake tower, he also included a private apartment for himself where he hosted famous guests, like Thomas Edison.
+   
+   Some of the scientists in the nineteenth centuryhad their names engraved in the tower.
+   .</p>
+
+  
+  <script>
+  var i_1 = 0;
+  var txt_1 = document.getElementById('demo_1_text').innerHTML;
+  var speed_1 = 30;
+  
+  function typeWriter_1() {
+    if (i_1 <= txt.length) {
+      document.getElementById("demo_1").innerHTML += txt_1.charAt(i_1);
+       i_1++;
+      //  i_1++;
+      setTimeout(typeWriter_1, speed_1);
+    }
+  }
+  </script>
+<p id="demo"> 
+  <hr><br><br>
+  <p id="Content" style="display: none;">
+    <button id="btn" class="button_anim" onclick="Display_Content(), document.getElementById('btn').style.display='none';">Click Me</button>
+    <br><br><hr><br><br>
+    <div id="content_in" style="display: none;">
+  <video width="1230" height="500" controls>
+    <source src="D:/School/Site/Assets/Eiffle tower.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video></div>
+</p>
+</p>
+
+<script>
+var i = 0;
+var txt = '';
+var txt = "Mr. Eiffel housed a meteorology lab on the Tower's third floor where he performed studies in mainly physics(and other studies aswell)  A secret military bunker was built underneath the Tower.Today the bunker is home of a small museum.When Gustave Eiffel designed his namesake tower, he also included a private apartment for himself where he hosted famous guests, like Thomas Edison. Some of the scientists in the nineteenth centuryhad their names engraved in the tower.Form3-Q is proud to present The Eiffle Tower!!!(Psst... CLick the link Below) ";
+var speed = 50;
+function Display_Content(){
+  document.getElementById('content_in').style.display="block";
+}
+function typeWriter() {
+  document.getElementById('Content').style.display="block";
+  if (i < txt,txt1.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+
+</body>
+</html>
+
+
